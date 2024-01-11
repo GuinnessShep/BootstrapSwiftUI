@@ -16,14 +16,6 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Validate repository
-        run: |
-          REPO=${{ github.repository }}
-  
-          if [ "$REPO" != "dleovl/Bootstrap" ]; then
-            echo "This workflow is only permitted usage for dleovl/Bootstrap repository. Exiting."
-            exit 1
-          fi
 
       - name: Checkout repository
         uses: actions/checkout@v3
